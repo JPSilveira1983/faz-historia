@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fazendo História</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="splash-screen" id="splash-screen" role="status" aria-label="Carregando o Fazendo História">
+  <img class="splash-emblem" src="img/logo.png" alt="">
+  <div class="splash-title">Fazendo História</div>
+  <div class="splash-subtitle">Prepare-se para o vestibular e para o ENEM<span class="splash-course">Curso de História da UEG — Unidade Iporá</span></div>
+</div>
+
+<div class="container">
+
+  <div class="header" id="header" style="display:none;">
+    <button class="header-home" type="button" onclick="backToWelcome()" aria-label="Voltar à tela inicial">
+      <img class="header-icon" src="img/logo.png" alt="Emblema do Curso de História da UEG — Unidade Iporá">
+      <div>
+        <div class="header-subtitle">Fazendo História</div>
+      </div>
+    </button>
+  </div>
+
+  <div class="welcome" id="welcome">
+    <img class="welcome-icon" src="img/logo.png" alt="Emblema do Curso de História da UEG — Unidade Iporá">
+    <div class="welcome-title">Fazendo História</div>
+    <div class="welcome-history-strip" aria-label="Subtítulo do aplicativo">Prepare-se para o vestibular e para o ENEM</div>
+    <div class="welcome-intro">
+      <p class="welcome-greeting">Olá, estudante!</p>
+      <p>Esta aplicação web foi concebida pelo Curso de História da Universidade Estadual de Goiás — Unidade Iporá, para contribuir com sua jornada formativa.</p>
+      <p>Nele, você encontrará questões de História presentes em provas do ENEM e em vestibulares, especialmente os realizados no estado de Goiás.</p>
+      <p>Este é um recurso de estudo concebido como meio de aperfeiçoamento complementar. Lembre-se de que ele não substitui o trabalho do professor, as boas aulas, a leitura disciplinada e sua dedicação contínua aos estudos.</p>
+      <p class="welcome-cta">Se você, como nós, é apaixonado por <span class="title-history">História</span>, inscreva-se no vestibular do Curso de História da UEG — Unidade Iporá pelo site do Núcleo de Seleção da UEG!</p>
+    </div>
+    <div class="welcome-stats">
+      <div class="stat-box">
+        <div class="stat-number" id="questions-count">16</div>
+        <div class="stat-label">questões disponíveis</div>
+      </div>
+    </div>
+    <button class="nav-btn nav-btn-primary" onclick="showCategories()" style="padding: 16px 40px; font-size: 16px;">Começar</button>
+    <br>
+    <a class="nav-btn nav-btn-secondary" href="https://nucleodeselecao.ueg.br/" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-top:12px; text-decoration:none;">Inscreva-se no Vestibular da UEG</a>
+    <br>
+    <button class="nav-btn nav-btn-secondary" type="button" onclick="shareApp()" style="margin-top:12px;">⤴ Compartilhar</button>
+  </div>
+
+  <div class="category-choice" id="category-choice">
+    <h2>Escolha uma categoria</h2>
+    <p>Selecione a área que deseja praticar.</p>
+    <div class="category-buttons">
+      <button class="category-button" type="button" onclick="startSimulado('brasil')"><strong>História do Brasil</strong><span id="count-brasil"></span></button>
+      <button class="category-button" type="button" onclick="startSimulado('geral')"><strong>História Geral</strong><span id="count-geral"></span></button>
+      <button class="category-button" type="button" onclick="startSimulado('goias')"><strong>História de Goiás</strong><span id="count-goias"></span></button>
+    </div>
+    <button class="nav-btn nav-btn-secondary" type="button" onclick="backToWelcome()" style="margin-top:20px;">Voltar ao início</button>
+  </div>
+
+  <div class="progress-bar" id="progress-bar" style="display:none;"><div class="progress-bar-fill" id="progress-bar-fill"></div></div>
+  <div class="progress-dots" id="dots" style="display:none;"></div>
+
+  <div class="card" id="question-card" style="display:none;">
+    <div class="card-label" id="question-num">Questão 1</div>
+    <div class="supporting-text" id="supporting-text"></div>
+    <div class="question-text" id="question-text"></div>
+    <div class="options" id="options"></div>
+    <div class="feedback" id="feedback"></div>
+  </div>
+
+  <div class="nav-bar" id="nav-bar" style="display:none;">
+    <button class="nav-btn nav-btn-secondary" id="btn-prev" onclick="prevQ()" disabled>Anterior</button>
+    <button class="nav-btn nav-btn-primary" id="btn-next" onclick="nextQ()">Próxima</button>
+  </div>
+
+  <div class="card promo-page" id="promo-page" aria-live="polite">
+    <div class="promo-kicker" id="promo-kicker">Vestibular UEG</div>
+    <div class="promo-question" id="promo-question">Ainda não sabe em qual curso superior ingressar?</div>
+    <div class="promo-title" id="promo-title">Três motivos para cursar História na UEG</div>
+    <div class="promo-reasons" id="promo-reasons"></div>
+    <a class="nav-btn nav-btn-secondary" id="promo-link" href="https://nucleodeselecao.ueg.br/" target="_blank" rel="noopener noreferrer" style="display:inline-block; margin-bottom:12px; text-decoration:none;">Inscreva-se no Vestibular da UEG</a>
+    <br>
+    <button class="nav-btn nav-btn-primary" type="button" onclick="continueStudy()">Continuar estudando</button>
+  </div>
+
+  <div class="results" id="results">
+    <div class="results-label">Prática concluída!</div>
+    <div class="results-score" id="score-display"></div>
+    <div class="results-sub" id="score-label"></div>
+    <div class="results-details" id="result-details"></div>
+    <button class="nav-btn nav-btn-primary" onclick="restart()" style="padding: 14px 36px; font-size: 15px; margin-bottom: 8px;">Estudar novamente</button>
+    <br>
+    <button class="nav-btn nav-btn-secondary" onclick="backToWelcome()" style="padding: 10px 24px; font-size: 13px; margin-top: 8px;">Voltar ao início</button>
+  </div>
+
+</div>
+
+<div class="footer">
+  <p>Aplicação web desenvolvida com ChatGPT por JP Silveira (2026). Contato: <a href="mailto:joao.paulo@ueg.br">joao.paulo@ueg.br</a></p>
+  <p>Aplicação web com finalidade educacional e sem qualquer propósito comercial. Nenhum cadastro é necessário para usufruir da aplicação web.</p>
+  <p>As questões vinculadas ao Inep mantêm sua atribuição e referência à fonte oficial: <a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener noreferrer">Provas e Gabaritos do ENEM — Inep</a>.</p>
+  <p>As questões da UEG que compõem essa aplicação pertencem ao Núcleo de Seleção da Universidade Estadual de Goiás.</p>
+  <p>Conteúdo autoral desta aplicação web licenciado sob <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt-br" target="_blank" rel="noopener noreferrer">CC BY-NC-SA 4.0</a>.</p>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
