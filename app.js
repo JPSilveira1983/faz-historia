@@ -1,32 +1,6 @@
 (function () {
   'use strict';
 
-  // Preferência de tema (clara/escura): funciona independente do carregamento
-  // do banco de questões, para que os botões já respondam assim que a página abre.
-  function effectiveTheme() {
-    var chosen = document.documentElement.getAttribute('data-theme');
-    if (chosen === 'light' || chosen === 'dark') return chosen;
-    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-  }
-
-  function updateThemeButtons() {
-    var current = effectiveTheme();
-    document.querySelectorAll('.theme-btn').forEach(function (btn) {
-      btn.classList.toggle('active', btn.getAttribute('data-theme-choice') === current);
-    });
-  }
-
-  window.setTheme = function (theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    try { localStorage.setItem('fh-theme', theme); } catch (e) {}
-    updateThemeButtons();
-  };
-
-  updateThemeButtons();
-  if (window.matchMedia) {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', updateThemeButtons);
-  }
-
   fetch('questoes.json')
     .then((response) => {
       if (!response.ok) {
