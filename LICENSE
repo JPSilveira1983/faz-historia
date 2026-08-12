@@ -1,38 +1,42 @@
-MIT License (English Version)
+# Licensing
 
-Copyright (c) 2026 JPSilveira1983
+Copyright © 2026 **JPSilveira1983**
+This web application was developed by **JP Silveira (2026)**, with assistance from ChatGPT, for educational purposes and without commercial intent.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+## Source Code — MIT License
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+The original source code of this application is made available under the **MIT License**.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Permission is granted to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the software under the terms of the MIT License, provided that the applicable copyright notice and permission notice are preserved.
 
-Licença MIT (Portuguese Version)
+The software is provided **“as is”**, without warranty of any kind.
 
-Direitos autorais (c) 2026 JPSilveira1983
+## Original Content — CC BY-NC-SA 4.0
 
-É concedida, gratuitamente, permissão a qualquer pessoa que obtenha uma cópia deste software e dos arquivos de documentação associados (o "Software") para utilizar o Software sem restrições, incluindo, sem limitação, os direitos de usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou vender cópias do Software, bem como permitir que as pessoas às quais o Software seja fornecido façam o mesmo, sujeitas às seguintes condições:
+Texts, explanations, educational materials, and other original content created specifically for this application are licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
 
-O aviso de direitos autorais acima e este aviso de permissão deverão ser incluídos em todas 
-as cópias ou em partes substanciais do Software.
+This means that such content may be shared and adapted provided that:
 
-O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA", SEM GARANTIA DE QUALQUER TIPO, EXPRESSA OU
-IMPLÍCITA, INCLUINDO, ENTRE OUTRAS, AS GARANTIAS DE COMERCIALIZAÇÃO, 
-ADEQUAÇÃO A UMA FINALIDADE ESPECÍFICA E NÃO VIOLAÇÃO DE DIREITOS. EM NENHUMA HIPÓTESE OS 
-AUTORES OU TITULARES DOS DIREITOS AUTORAIS SERÃO RESPONSÁVEIS POR QUALQUER REIVINDICAÇÃO, DANO OU OUTRA 
-RESPONSABILIDADE, SEJA EM DECORRÊNCIA DE CONTRATO, ATO ILÍCITO OU DE OUTRA FORMA, RESULTANTE DE, DECORRENTE DE 
-OU RELACIONADA AO SOFTWARE OU AO USO OU A OUTRAS OPERAÇÕES COM O 
-SOFTWARE.
+* appropriate attribution is given;
+* the material is not used for commercial purposes;
+* adaptations are distributed under the same or a compatible license.
+
+License: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+## Third-Party Materials
+
+The licenses described above **do not apply to third-party materials** incorporated into this application.
+
+Questions originating from the **Brazilian National High School Examination (ENEM)** retain their identification and attribution to their official source:
+
+**Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) — ENEM Exams and Answer Keys.**
+
+Questions originating from selection examinations administered by the **Universidade Estadual de Goiás (UEG)** retain their identification and attribution to the **Núcleo de Seleção da Universidade Estadual de Goiás**.
+
+These materials are not relicensed by this project under either the MIT License or the CC BY-NC-SA 4.0 License. They remain subject to the rights, attribution requirements, and conditions applicable to their respective sources or rights holders.
+
+## Purpose
+
+This application is intended exclusively for educational and non-commercial purposes. No user registration is required to access or use it.
+
+Contact: **[joao.paulo@ueg.br](mailto:joao.paulo@ueg.br)**
