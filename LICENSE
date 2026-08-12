@@ -1,7 +1,7 @@
 # Licensing
 
 Copyright © 2026 **JPSilveira1983**
-This web application was developed by **JP Silveira (2026)**, with assistance from ChatGPT, for educational purposes and without commercial intent.
+This web application was developed by **JP Silveira (2026)**, with assistance from Claude, for educational purposes and without commercial intent.
 
 ## Source Code — MIT License
 
@@ -40,3 +40,48 @@ These materials are not relicensed by this project under either the MIT License 
 This application is intended exclusively for educational and non-commercial purposes. No user registration is required to access or use it.
 
 Contact: **[joao.paulo@ueg.br](mailto:joao.paulo@ueg.br)**
+
+
+# Licenciamento
+
+Copyright © 2026 **JPSilveira1983**
+
+Esta aplicação web foi desenvolvida por **JP Silveira (2026)**, com assistência do Calude, para fins educacionais e sem propósito comercial.
+
+## Código-fonte — Licença MIT
+
+O código-fonte original desta aplicação é disponibilizado sob a **Licença MIT**.
+
+É permitido usar, copiar, modificar, mesclar, publicar, distribuir, sublicenciar e/ou comercializar cópias do software, nos termos estabelecidos pela Licença MIT, desde que o aviso de direitos autorais e o respectivo aviso de permissão sejam preservados.
+
+O software é fornecido **“no estado em que se encontra”**, sem garantias de qualquer natureza.
+
+## Conteúdo autoral — CC BY-NC-SA 4.0
+
+Os textos, explicações, materiais didáticos e demais conteúdos autorais originais produzidos especificamente para esta aplicação estão licenciados sob a **Creative Commons Atribuição-NãoComercial-CompartilhaIgual 4.0 Internacional (CC BY-NC-SA 4.0)**.
+
+Isso significa que esses conteúdos podem ser compartilhados e adaptados, desde que:
+
+* seja atribuída a autoria adequada;
+* o uso não tenha finalidade comercial;
+* eventuais adaptações sejam distribuídas sob a mesma licença ou sob licença compatível.
+
+Licença: [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt-br)
+
+## Materiais de terceiros
+
+As licenças acima **não se aplicam aos materiais de terceiros** incorporados à aplicação.
+
+As questões provenientes do **Exame Nacional do Ensino Médio (ENEM)** mantêm sua identificação e atribuição à fonte oficial:
+
+**Instituto Nacional de Estudos e Pesquisas Educacionais Anísio Teixeira (Inep) — Provas e Gabaritos do ENEM.**
+
+As questões provenientes dos processos seletivos da **Universidade Estadual de Goiás (UEG)** mantêm sua identificação e atribuição ao **Núcleo de Seleção da Universidade Estadual de Goiás**.
+
+Esses materiais não são relicenciados por este projeto sob a Licença MIT ou sob a CC BY-NC-SA 4.0. Permanecem sujeitos aos direitos, atribuições e condições aplicáveis às respectivas fontes ou titulares.
+
+## Finalidade
+
+Esta aplicação possui finalidade educacional e não comercial. Nenhum cadastro é necessário para sua utilização.
+
+Contato: **[joao.paulo@ueg.br](mailto:joao.paulo@ueg.br)**
