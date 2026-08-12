@@ -843,50 +843,13 @@
 
   .promo-page > * { position: relative; z-index: 1; }
 
-  .promo-kicker {
-    color: var(--history-red-deep);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  .promo-image {
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+    display: block;
+    margin: -24px -24px 20px -24px;
+    max-width: none;
+    width: calc(100% + 48px);
   }
-
-  .promo-title {
-    color: var(--history-red);
-    font-family: 'Action Comic', 'Bangers', 'Comic Sans MS', cursive;
-    font-size: 32px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    line-height: 1.1;
-    margin: 10px 0 20px;
-  }
-
-  .promo-question {
-    color: var(--text-primary);
-    font-family: 'Merriweather', Georgia, serif;
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 1.5;
-    margin: 12px auto 4px;
-    max-width: 520px;
-  }
-
-  .promo-reasons {
-    display: grid;
-    gap: 12px;
-    margin: 0 auto 24px;
-    max-width: 580px;
-    text-align: left;
-  }
-
-  .promo-reason {
-    background: color-mix(in srgb, var(--surface) 82%, transparent);
-    border-left: 4px solid var(--history-red);
-    border-radius: var(--radius-sm);
-    padding: 13px 15px;
-  }
-
-  .promo-reason strong { display: block; margin-bottom: 3px; }
 
   .promo-page .nav-btn-primary { background: var(--history-red); }
 
@@ -1022,4 +985,5 @@
       background-repeat: no-repeat;
       background-size: auto, contain;
     }
+    .promo-image { margin: -18px -18px 18px -18px; width: calc(100% + 36px); }
   }
