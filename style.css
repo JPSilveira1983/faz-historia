@@ -9,14 +9,18 @@
     --text-secondary: #636366;
     --text-tertiary: #8e8e93;
     --text-quaternary: #c7c7cc;
-    --accent: #2d8a4e;
-    --accent-light: #e8f5ec;
-    --accent-muted: #c4e5cf;
+    --accent: #3f7ba3;
+    --accent-light: #e6f0f6;
+    --accent-muted: #bcd8e7;
     --positive: #34c759;
     --danger: #ff3b30;
     --warning: #ff9500;
     --history-red: #8b1e2d;
     --history-red-deep: #67111e;
+    --sky-deep: #16324a;
+    --sky-mid: #2f5f80;
+    --sun-gold: #eab56a;
+    --earth-warm: #8a5a3a;
     --radius-sm: 6px;
     --radius-md: 10px;
     --radius-lg: 12px;
@@ -39,14 +43,18 @@
       --text-secondary: #98989d;
       --text-tertiary: #636366;
       --text-quaternary: #48484a;
-      --accent: #4bb86e;
-      --accent-light: #1a3d28;
-      --accent-muted: #2d5a3d;
+      --accent: #6fb3dd;
+      --accent-light: #16303d;
+      --accent-muted: #2c5268;
       --positive: #30d158;
       --danger: #ff453a;
       --warning: #ff9f0a;
       --history-red: #e2536a;
       --history-red-deep: #ff8fa3;
+      --sky-deep: #0d1f2e;
+      --sky-mid: #1f425a;
+      --sun-gold: #f0c584;
+      --earth-warm: #a9744c;
     }
   }
 
@@ -61,14 +69,18 @@
     --text-secondary: #98989d;
     --text-tertiary: #636366;
     --text-quaternary: #48484a;
-    --accent: #4bb86e;
-    --accent-light: #1a3d28;
-    --accent-muted: #2d5a3d;
+    --accent: #6fb3dd;
+    --accent-light: #16303d;
+    --accent-muted: #2c5268;
     --positive: #30d158;
     --danger: #ff453a;
     --warning: #ff9f0a;
     --history-red: #e2536a;
     --history-red-deep: #ff8fa3;
+    --sky-deep: #0d1f2e;
+    --sky-mid: #1f425a;
+    --sun-gold: #f0c584;
+    --earth-warm: #a9744c;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -86,17 +98,49 @@
 
   .splash-screen {
     align-items: center;
-    background:
-      linear-gradient(145deg, color-mix(in srgb, #fff4dc 82%, transparent), color-mix(in srgb, #ecd8b0 76%, transparent)),
-      url('img/texture.png') center / cover no-repeat;
+    background: var(--sky-deep);
     display: flex;
     flex-direction: column;
     inset: 0;
     justify-content: center;
+    overflow: hidden;
+    padding: 24px;
     position: fixed;
     text-align: center;
     transition: opacity 0.45s ease, visibility 0.45s ease;
     z-index: 20;
+  }
+
+  .splash-screen::before {
+    animation: splashKenBurns 16s ease-in-out infinite alternate;
+    background: url('img/splash-bg.jpg') center / cover no-repeat;
+    content: '';
+    inset: 0;
+    opacity: 0.62;
+    position: absolute;
+    z-index: 0;
+  }
+
+  .splash-screen::after {
+    background: linear-gradient(180deg, color-mix(in srgb, var(--sky-deep) 82%, transparent) 0%, color-mix(in srgb, var(--sky-deep) 40%, transparent) 46%, color-mix(in srgb, var(--earth-warm) 62%, transparent) 100%);
+    content: '';
+    inset: 0;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .splash-screen > * {
+    position: relative;
+    z-index: 2;
+  }
+
+  @keyframes splashKenBurns {
+    0% { transform: scale(1) translate(0, 0); }
+    100% { transform: scale(1.12) translate(-1.5%, -1.5%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .splash-screen::before { animation: none; }
   }
 
   .splash-screen.is-hidden {
@@ -106,35 +150,42 @@
   }
 
   .splash-emblem {
-    height: 112px;
-    mix-blend-mode: multiply;
+    background: color-mix(in srgb, var(--surface) 92%, transparent);
+    border-radius: 50%;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+    height: 122px;
     object-fit: contain;
-    width: 112px;
+    padding: 12px;
+    width: 122px;
   }
 
   .splash-title {
-    color: var(--history-red);
+    color: #fff8ec;
     font-family: 'Action Comic', 'Bangers', 'Comic Sans MS', cursive;
-    font-size: 48px;
+    font-size: 54px;
     font-weight: 400;
     letter-spacing: 0.04em;
-    margin: 12px 0 5px;
+    margin: 16px 0 7px;
+    text-shadow: 0 2px 14px rgba(0,0,0,0.55);
   }
 
   .splash-subtitle {
-    color: var(--history-red-deep);
+    color: var(--sun-gold);
     font-family: 'Merriweather', Georgia, serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.55;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.5);
   }
 
   .splash-course {
+    color: #fff8ec;
     display: block;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.04em;
-    margin-top: 8px;
+    margin-top: 9px;
+    opacity: 0.92;
   }
 
   .container {
@@ -953,6 +1004,10 @@
   .footer a { color: var(--accent); }
 
   @media (max-width: 480px) {
+    .splash-emblem { height: 104px; width: 104px; }
+    .splash-title { font-size: 38px; }
+    .splash-subtitle { font-size: 17px; }
+    .splash-course { font-size: 14px; }
     .container { padding: 16px 12px 0; }
     .header-subtitle { font-size: 22px; }
     .results-score { font-size: 56px; }
