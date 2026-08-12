@@ -45,6 +45,12 @@
       alt: 'Vestibular de História da UEG 2027-1 — curso superior gratuito, perto de sua casa',
       linkText: 'Inscreva-se no Vestibular da UEG',
       linkUrl: 'https://nucleodeselecao.ueg.br/detalhe_processos.asp'
+    },
+    {
+      image: 'img/promo-vestibular-3.jpg',
+      alt: 'Vestibular de História da UEG 2027-1 — curso superior gratuito, perto de sua casa',
+      linkText: 'Inscreva-se no Vestibular da UEG',
+      linkUrl: 'https://nucleodeselecao.ueg.br/detalhe_processos.asp'
     }
   ];
 
