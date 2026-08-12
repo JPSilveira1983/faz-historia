@@ -31,32 +31,20 @@
   let promoCount = 0;
 
   // Divulgação institucional exibida a cada 10 questões respondidas.
-  // Para acrescentar novos anúncios aos poucos, basta adicionar um novo objeto
-  // a este vetor: o rodízio entre eles acontece automaticamente.
+  // Para acrescentar novas artes aos poucos, basta adicionar um novo objeto
+  // a este vetor: o rodízio entre elas acontece automaticamente.
   const promoSlides = [
     {
-      kicker: 'Vestibular UEG',
-      question: 'Ainda não sabe em qual curso superior ingressar?',
-      title: 'Três motivos para cursar História na UEG',
-      reasons: [
-        { title: '1. Universidade pública, gratuita e próxima de você', text: 'Com professores qualificados e formação comprometida com sua trajetória.' },
-        { title: '2. Qualificação profissional, intelectual e crítica', text: 'Uma formação que faz a diferença na vida e no trabalho.' },
-        { title: '3. Um perfil profissional amplo', text: 'Possibilidades de atuação como professor, pesquisador, comunicador e curador em instituições que lidam com a História.' }
-      ],
+      image: 'img/promo-vestibular-1.jpg',
+      alt: 'Vestibular de História da UEG 2027-1 — curso superior gratuito, perto de sua casa',
       linkText: 'Inscreva-se no Vestibular da UEG',
-      linkUrl: 'https://nucleodeselecao.ueg.br/'
+      linkUrl: 'https://nucleodeselecao.ueg.br/detalhe_processos.asp'
     },
     {
-      kicker: 'Curso de História — UEG Iporá',
-      question: 'Já pensou em transformar seu interesse por História em profissão?',
-      title: 'Um curso pensado para quem ama História',
-      reasons: [
-        { title: '1. Formação pública e gratuita', text: 'Estrutura da Universidade Estadual de Goiás, sem mensalidade.' },
-        { title: '2. Ensino, pesquisa e extensão', text: 'Contato direto com professores e projetos ao longo de toda a graduação.' },
-        { title: '3. Inscrição simples', text: 'Acesse o site do Núcleo de Seleção da UEG e confira os próximos processos seletivos.' }
-      ],
-      linkText: 'Conheça o curso e inscreva-se',
-      linkUrl: 'https://nucleodeselecao.ueg.br/'
+      image: 'img/promo-vestibular-2.jpg',
+      alt: 'Vestibular de História da UEG 2027-1 — curso superior gratuito, perto de sua casa',
+      linkText: 'Inscreva-se no Vestibular da UEG',
+      linkUrl: 'https://nucleodeselecao.ueg.br/detalhe_processos.asp'
     }
   ];
 
@@ -218,17 +206,9 @@
 
   function renderPromo() {
     const slide = promoSlides[promoCount % promoSlides.length];
-    document.getElementById('promo-kicker').textContent = slide.kicker;
-    document.getElementById('promo-question').textContent = slide.question;
-    document.getElementById('promo-title').textContent = slide.title;
-    const reasonsEl = document.getElementById('promo-reasons');
-    reasonsEl.innerHTML = '';
-    slide.reasons.forEach((reason) => {
-      const div = document.createElement('div');
-      div.className = 'promo-reason';
-      div.innerHTML = '<strong>' + reason.title + '</strong>' + reason.text;
-      reasonsEl.appendChild(div);
-    });
+    const image = document.getElementById('promo-image');
+    image.src = slide.image;
+    image.alt = slide.alt;
     const link = document.getElementById('promo-link');
     link.textContent = slide.linkText;
     link.href = slide.linkUrl;
@@ -236,9 +216,9 @@
 
   function showPromo() {
     promoShownAt.add(current);
-    promoCount++;
     showingPromo = true;
     renderPromo();
+    promoCount++;
     document.getElementById('question-card').style.display = 'none';
     document.getElementById('nav-bar').style.display = 'none';
     document.getElementById('progress-bar').style.display = 'none';
