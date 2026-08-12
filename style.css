@@ -668,40 +668,6 @@
     text-align: left;
   }
 
-  .theme-toggle {
-    display: flex;
-    justify-content: center;
-    gap: 8px;
-    margin: 4px auto 18px;
-  }
-
-  .theme-btn {
-    align-items: center;
-    background: var(--surface);
-    border: 1.5px solid var(--border);
-    border-radius: 99px;
-    color: var(--text-secondary);
-    cursor: pointer;
-    display: inline-flex;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 12.5px;
-    font-weight: 600;
-    gap: 6px;
-    padding: 7px 14px;
-    transition: all var(--transition);
-  }
-
-  .theme-btn:hover {
-    border-color: var(--accent-muted);
-    color: var(--text-primary);
-  }
-
-  .theme-btn.active {
-    background: var(--history-red);
-    border-color: var(--history-red);
-    color: #fff;
-  }
-
   .welcome-cta {
     background: transparent;
     border-left: 4px solid var(--history-red);
