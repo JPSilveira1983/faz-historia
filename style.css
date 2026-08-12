@@ -27,8 +27,10 @@
     --transition: 0.2s cubic-bezier(0.25,0.46,0.45,0.94);
   }
 
+  /* Tema escuro automático (segue o sistema), a menos que o usuário escolha manualmente
+     pelo botão de tema (ver [data-theme] abaixo, que tem prioridade sobre isto). */
   @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not([data-theme="light"]) {
       --bg: #0d0d0f;
       --surface: #1c1c1e;
       --surface-muted: #2c2c2e;
@@ -46,6 +48,27 @@
       --history-red: #e2536a;
       --history-red-deep: #ff8fa3;
     }
+  }
+
+  /* Tema escolhido manualmente pelo usuário (botão "Tela clara"/"Tela escura"),
+     sempre tem prioridade sobre a preferência do sistema. */
+  :root[data-theme="dark"] {
+    --bg: #0d0d0f;
+    --surface: #1c1c1e;
+    --surface-muted: #2c2c2e;
+    --border: #38383a;
+    --text-primary: #f2f2f7;
+    --text-secondary: #98989d;
+    --text-tertiary: #636366;
+    --text-quaternary: #48484a;
+    --accent: #4bb86e;
+    --accent-light: #1a3d28;
+    --accent-muted: #2d5a3d;
+    --positive: #30d158;
+    --danger: #ff453a;
+    --warning: #ff9f0a;
+    --history-red: #e2536a;
+    --history-red-deep: #ff8fa3;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -631,7 +654,7 @@
   .welcome-intro {
     max-width: 620px;
     margin: 0 auto 26px;
-    color: var(--text-secondary);
+    color: var(--text-primary);
     font-family: 'Merriweather', Georgia, serif;
     font-size: 14px;
     line-height: 1.8;
@@ -643,6 +666,40 @@
   .welcome-greeting {
     font-weight: 700;
     text-align: left;
+  }
+
+  .theme-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin: 4px auto 18px;
+  }
+
+  .theme-btn {
+    align-items: center;
+    background: var(--surface);
+    border: 1.5px solid var(--border);
+    border-radius: 99px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 12.5px;
+    font-weight: 600;
+    gap: 6px;
+    padding: 7px 14px;
+    transition: all var(--transition);
+  }
+
+  .theme-btn:hover {
+    border-color: var(--accent-muted);
+    color: var(--text-primary);
+  }
+
+  .theme-btn.active {
+    background: var(--history-red);
+    border-color: var(--history-red);
+    color: #fff;
   }
 
   .welcome-cta {
